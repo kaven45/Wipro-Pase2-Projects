@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        .container{
+            background: rgb(209, 230, 243);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-left: 550px;
+            margin-top: 200px;
+
+
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-width: 5px;
+            background-color: rgb(100, 204, 197);
+            color: rgb(0, 28, 48);
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+        #home{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(10, 40, 60);">
+
+    <div class="container">
+    <h2>Survey Form</h2>
+
+    <form action="/submit-survey" method="post">
+
+        <!-- Single Choice Question using Radio Buttons -->
+        <label>1. How satisfied are you with our service?</label><br>
+        <input type="radio" id="very_satisfied" name="satisfaction" value="very_satisfied">
+        <label for="very_satisfied">Very Satisfied</label><br>
+
+        <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+        <label for="satisfied">Satisfied</label><br>
+
+        <input type="radio" id="neutral" name="satisfaction" value="neutral">
+        <label for="neutral">Neutral</label><br>
+
+        <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label><br>
+
+        <input type="radio" id="very_dissatisfied" name="satisfaction" value="very_dissatisfied">
+        <label for="very_dissatisfied">Very Dissatisfied</label><br><br>
+
+        <!-- Multiple Choice Question using Checkboxes -->
+        <label>2. What features do you like? (Select all that apply)</label><br>
+        <input type="checkbox" id="easy_use" name="features" value="easy_use">
+        <label for="easy_use">Easy to Use</label><br>
+
+        <input type="checkbox" id="performance" name="features" value="performance">
+        <label for="performance">Performance</label><br>
+
+        <input type="checkbox" id="design" name="features" value="design">
+        <label for="design">Design</label><br>
+
+        <input type="checkbox" id="support" name="features" value="support">
+        <label for="support">Customer Support</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button">Submit</button>
+
+    </form>
+</div>
+<a href="index.html" id="home">
+    <p style="color: antiquewhite;">Back to Home</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Form</title>
+    <style> 
+    #home{
+        text-align: center;
+        color: antiquewhite;
+    }
+    .container{
+            background: rgb(209, 230, 243);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-left: 550px;
+            margin-top: 200px;
+        }
+        .button3 {
+            padding: 10px 30px;
+            margin-top: 15px;
+            background-color: orange;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;   
+            color: white;
+        }
+        
+
+        .button3:hover {
+            transform: scale(1.1);
+        }
+</style>
+</head>
+<body style="background-color: rgb(0, 28, 48);">
+    <div class="container">
+
+    <h2>Poll: Which is your favorite movie ?</h2>
+    
+    <form action="Poll-results.html" method="get">
+        <label>
+            <input type="radio" name="movie" value="IronMan" required> IronMan
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="movie" value="Venom"> Venom
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="movie" value="SpiderMan"> SpiderMan
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="movie" value="Thor"> Thor
+        </label>
+        <br><br>
+        
+        <button type="submit" class="button3">Vote</button>
+    </form>
+</div>
+<a href="index.html" id="home">
+    <p>Back to Home</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Body Flexbox for Centering */
+        body {
+            background-color: rgb(0, 28, 48);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        /* Form Container */
+        .container {
+            background: rgb(10, 40, 60);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Title */
+        h1 {
+            color: rgb(195, 142, 57);
+            margin-bottom: 10px;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* Label & Input Styling */
+        label {
+            color: rgb(195, 142, 57);
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgb(100, 204, 197);
+            border-radius: 5px;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-width: 5px;
+            background-color: rgb(100, 204, 197);
+            color: rgb(0, 28, 48);
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+        #contact{
+            position: absolute;
+            top: 0px;   /* Distance from the top */
+            right: 20px; /* Distance from the right */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+          
+        }
+
+        
+    </style>
+</head>
+<body>
+    <a href="simplecontactform.html" id="contact">
+        <p style="color: antiquewhite;">Contact Page</p>
+    </a>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="/register" method="post">
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <a href="index.html" id="signup">
+            <p style="color: antiquewhite;">Back to Home</p>
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <style>
+        .container{
+            background: rgba(175, 220, 250, 0.838);
+            width: 300px;
+            height: 350px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap; 
+            margin-left: 590px;
+            margin-top: 200px;
+        }
+        #home{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(10, 40, 60);">
+
+    <div class="container">
+    <h2>Contact Us</h2>
+    
+    <form action="#" method="post">
+       
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    <a href="index.html" id="home">
+        <p style="color: antiquewhite;">Back to Home</p>
+    </a>
+
+
+</body>
+</html>

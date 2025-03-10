@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FeedBack Form</title>
+
+        <style>
+            .container{
+            background: rgb(209, 230, 243);
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-left: 550px;
+            margin-top: 200px;
+
+
+        }
+            #home{
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(10, 40, 60);">
+        <div class="container">
+        <h3>Please make Rating...</h3>
+        <form action="#" method="post">
+            <label for="option1">5</label>
+                <input type="radio" id="option1" name="group1" value="option1"> <br>
+            
+            <label for="option2">4</label>
+                <input type="radio" id="option2" name="group1"><br>
+            
+                <label for="option3">3</label>
+                <input type="radio" id="option3" name="group1"><br>
+            
+                <label for="option4">2</label>
+                <input type="radio" id="option4" name="group1"><br>
+
+                <label for="option5">1</label>
+                <input type="radio" id="option5" name="group1"><br>
+
+                <label for="comments" >Any Comments</label> <br>
+                    <textarea id="comments" placeholder="Write u r comments"></textarea>
+                    <br>
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+    <a href="index.html" id="home">
+        <p style="color: antiquewhite;">Back to Home</p>
+    </a>
+    </body>
+</html>
