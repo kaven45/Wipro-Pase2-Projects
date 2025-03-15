@@ -1,0 +1,116 @@
+
+<!-- Print statment -->
+<p>customer works!</p>
+
+<!-- interpolation  -->
+<h1>{{msg}}</h1>
+<p>Sum of 5 + 3 = {{ 5 + 3 }}</p>
+<p>Uppercase Message: {{ msg.toUpperCase() }}</p>
+<!-- property binding -->
+<img [src]="imageUrl" alt="Angular Logo" >
+<button [disabled]="isDisabled">Click Me</button>
+<br>
+
+<!-- event binding -->
+<button (click)="showMessage()">Click Me</button>
+<br>
+<br>
+<button (click)="updateMessage()">Update Message</button>
+<br>
+<br>
+
+<!-- structural directives  -->
+<p *ngIf="isLoggedIn">Welcome, {{ msg }}</p>
+
+<button (click)="isLoggedIn = !isLoggedIn">Toggle Login</button>
+<br>
+<br>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<br><br>
+
+
+<div [ngSwitch]="role">
+  <p *ngSwitchCase="'admin'">Admin side</p>
+  <p *ngSwitchCase="'user'">User side</p>
+  <p *ngSwitchDefault>Guest Side</p>
+</div>
+
+<br><br>
+
+<!-- attribute directives  -->
+
+<p [ngClass]="{'active': isActive, 'highlight': isHighlighted}">
+  This is a dynamic class
+  </p>
+
+  <br>
+  <p [ngStyle]="{'color': textColor, 'font-size': fontSize}">
+    Styled text
+  </p>
+
+  <!-- pipes -->
+
+<p>Uppercase: {{ 'hello' | uppercase }}</p>
+<p>Formatted Date: {{ today | date:'fullDate' }}</p>
+<p>Price: {{ price | currency:'USD' }}</p>
+<p>Percentage: {{ 0.75 | percent }}</p>
+
+----------------------------------------------------------------------------------------------------------
+
+import { Component } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
+@Component({
+  selector: 'app-customer',
+  imports: [CommonModule],
+  templateUrl: './customer.component.html',
+  styleUrl: './customer.component.css'
+})
+export class CustomerComponent {
+    msg: string='hiii, i am kaven';
+
+    imageUrl: string = 'assets/dp.jpg';
+
+    isDisabled: boolean = true;
+
+    showMessage() {
+      alert('Button Clicked!');
+    }
+
+    updateMessage() {
+      this.msg = 'hiii, i am abi';
+    }
+
+    isLoggedIn = false;
+
+    items = ['Apple', 'Banana', 'Cherry'];
+
+    role = 'user'; // Op: User Dashboard
+
+    isActive = true;
+    isHighlighted = false;
+
+    textColor = 'red';
+    fontSize = '20px';
+
+    today = new Date();
+    price = 1000;
+
+
+}
+
+--------------------------------------------------------------------------------------------------------------------
+
+.active {
+  color: white;
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.highlight {
+  font-weight: bold;
+  text-decoration: underline;
+}
